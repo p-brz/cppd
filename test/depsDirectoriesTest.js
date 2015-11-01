@@ -9,8 +9,12 @@ describe("DepsParser", function(){
     
     verifyDirectories = function(directories, expectedDirs, excludedProperties){
         expectedDirs = expectedDirs ? expectedDirs : ['include', 'lib', 'src'];
+        verifyProperties(directories, expectedDirs, excludedProperties);
+    }
+    
+    verifyProperties = function(directories, expectedProperties, excludedProperties){
         directories.should.be.Object;
-        directories.should.have.properties(expectedDirs);
+        directories.should.have.properties(expectedProperties);
         
         if(excludedProperties){
             directories.should.not.have.properties(excludedProperties)
@@ -53,6 +57,28 @@ describe("DepsParser", function(){
         it("should recognize directory conventions even in absence of package.json",function(done){
             parser.parse('conventions', './test', function(err, dirs){
                 verifyDirectories(dirs, {'include' : 'include', 'src' : 'src', 'lib' : 'lib'});
+                done();
+            });
+        });
+    });
+    
+    describe('#generateVars', function(){
+        it("should generate a dictionary with env variables generated from a given project directories"
+        , function(done){
+            projName = "sample_project"
+            parser.parse(projName, './test', function(err, dirs){
+                vars = parser.generateVars(projName, dirs);
+                verifyProperties(vars, [projName + '_include', projName + '_lib', projName + '_src']);
+                done();
+            });
+        });
+    });
+    
+    describe("#parseToVars", function(){
+        it("should parse the cpp directories of a given project into a dict of variables and values", function(done){
+            projName = "conventions_and_json"
+            parser.parseToVars(projName, './test', function(err, vars){
+                verifyProperties(vars, [projName + '_include', projName + '_src']);
                 done();
             });
         });
