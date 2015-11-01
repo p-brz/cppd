@@ -1,0 +1,9 @@
+{
+  "name": "hello-lib",
+  "version": "1.0.0",
+  "directories" : {
+    "include" : "somedir",
+    "src" : "source_code_dir",
+    "lib" : "dir_of_compiled_libraries"
+  }
+}

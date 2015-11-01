@@ -1,0 +1,15 @@
+{
+  "name": "hello-lib",
+  "version": "1.0.0",
+  "description": "C++ library to say hello.",
+  "scripts": {
+    "build": "./waf configure build",
+    "install" : "npm run build"
+  },
+  "directories" : {
+    "obj" : "lib"
+  },
+  "dependencies": {
+  },
+  "author": ""
+}

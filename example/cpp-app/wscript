@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+top='.'
+out='build'
+
+def options(opt):
+    opt.load('compiler_c')
+    opt.load('compiler_cxx')
+
+def configure(conf):
+    #Load features
+    conf.load('compiler_c')
+    conf.load('compiler_cxx')
+
+def build(bld):
+    bld.program( target='cppapp'
+               , source=["main.cpp"])
+

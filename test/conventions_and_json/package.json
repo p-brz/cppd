@@ -1,0 +1,7 @@
+{
+  "name": "hello-lib",
+  "version": "1.0.0",
+  "directories" : {
+    "include" : "real_include"
+  }
+}

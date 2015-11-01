@@ -1,0 +1,23 @@
+{
+  "name": "cpp-dependencies",
+  "version": "0.0.1",
+  "description": "Tool to help use c/c++ projects with npm.",
+  "main": "cpp-deps.js",
+  "author": "Paulo Brizolara",
+  "license": "MIT",
+  "bin": {
+    "cdeps": "cpp-deps.js"
+  },
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "dependencies": {
+    "cli-env": "^1.0.10",
+    "commander": "^2.8.1",
+    "read-package-json": "^2.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.1"
+  }
+}
