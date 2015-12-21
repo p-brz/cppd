@@ -7,7 +7,9 @@
     "install" : "npm run build"
   },
   "directories" : {
-    "obj" : "lib"
+    "lib" : "lib",
+    "src" : "src",
+    "include" : "src"
   },
   "dependencies": {
   },

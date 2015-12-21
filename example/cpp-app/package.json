@@ -4,14 +4,14 @@
   "description": "App example",
   "scripts": {
     "build": "./waf configure build",
-    "install" : "cdeps && env && npm run build"
+    "install" : "cppd && env && npm run build"
   },
   "bin" : {
     "cppapp" : "build/cpp-app"
   },
   "dependencies": {
     "hello-lib" : "../hello-lib",
-    "cpp-dependencies" : "../.."
+    "cppd" : "../.."
   },
   "author": ""
 }
