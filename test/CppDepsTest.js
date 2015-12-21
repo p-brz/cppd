@@ -3,7 +3,7 @@ var path = require('path')
 
 CppDeps = require('../lib/CppDeps.js')
 
-PKG_REL_PATH = './test/installed_pkg';
+PKG_REL_PATH = './test/data/installed_pkg';
 PKG_ABSPATH  = path.resolve(PKG_REL_PATH),
 SUBPKGS_PATH = path.join(PKG_REL_PATH, 'node_modules')
 
@@ -34,7 +34,7 @@ describe("CppDeps", function(){
 
     describe("#findDependenciesPaths", function(){
         context("given some installed package", function(){
-            installedPackage = './test/installed_pkg'
+            installedPackage = './test/data/installed_pkg'
 
             it("it should travel the dependencies of that package and return a list of their cpp dirs"
             , function(done){
