@@ -1,0 +1,7 @@
+{
+  "name": "installed_pkg",
+  "dependencies" : {
+    "subpkg1" : "unexistent",
+    "other" : "unexistent"
+  }
+}
