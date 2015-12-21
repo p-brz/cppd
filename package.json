@@ -1,12 +1,12 @@
 {
-  "name": "cpp-dependencies",
+  "name": "cppd",
   "version": "0.0.1",
   "description": "Tool to help use c/c++ projects with npm.",
-  "main": "cpp-deps.js",
+  "main": "cppd.js",
   "author": "Paulo Brizolara",
   "license": "MIT",
   "bin": {
-    "cdeps": "cppdeps-cmd.js"
+    "cppd": "cppd.js"
   },
   "scripts": {
     "test": "mocha test/"
